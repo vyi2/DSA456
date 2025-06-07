@@ -32,7 +32,7 @@ def function3(list):
 #= 1 + n + 2n(n-1)
 #= 1 + n + 2n^2 - 2n
 #= 1 - n + 2n^2
-#T(n) = O(n^)
+#T(n) = O(n^2)
 
 
 def function4(number):
