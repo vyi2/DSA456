@@ -17,7 +17,7 @@
             return #1
         
         current = self.front #1
-        while current is not None and current.data < data: #1n+1
+        while current is not None and current.data < data: #2n+1
             current = current.next
         previous = current.prev #1
         previous.next = new_node #1 
@@ -26,12 +26,12 @@
         current.prev = new_node #1
 
 #T(n) = 1 + 1 + 1 + 1 + 1 + 1n + 1 + 1 + 1 + 1 + 1 + 1 
-#= 11 + n
+#= 11 + 2n
 #T(n) = O(n)
 
 def remove(self, data):
         current = self.front #1
-        while current is not None and current.data != data: #1n+1
+        while current is not None and current.data != data: #2n+1
             current = current.next
         
         if current is None: #1
@@ -45,13 +45,13 @@ def remove(self, data):
             self.back = current.prev #1
             self.back.next = None #1
             return True #1
-        else: #1
+        else:
             current.prev.next = current.next #1
             current.next.prev = current.prev #1
             return True #1
 
-#T(n) = 1 + 1n + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
-#= 9 + n
+#T(n) = 1 + 2n + 1 + 1 + 1 + 1 + 1 + 1 + 1
+#= 8 + 2n
 #T(n) = O(n)
 
 def is_present(self, data):
