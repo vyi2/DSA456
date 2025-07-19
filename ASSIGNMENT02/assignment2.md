@@ -69,12 +69,11 @@ def is_present(self, data):
 def __len__(self):
     count = 0 #1
     current = self.front #1 
-    while current is not None: 2n+1
+    while current is not None: 3n+1
         count += 1
         current = current.next
     return count #1
 
-T(n) = 1 + 1 + (n + 1) + 2n + 1
-#= (1 + 1 + 1) + (n + 2n) + 1
-#= 3 + 3n + 1
-#= 3n + 4
+T(n) = 1 + 1 + 3n + 1 + 1
+#= 4 + 3n
+#T(n) = O(n)
